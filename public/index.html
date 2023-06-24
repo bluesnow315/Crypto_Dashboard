@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Crypto dashboard</title>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#030614" />
+    <meta
+      name="description"
+      content="Cryptocurrency information dashboard for prices, charts and market overviews. Get access to trends, coin correlations, status updates, exchange data, market snapshots and much more!"
+    />
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.cryptoscapes.org/"/>
+    <meta property="og:site_name" content="Cryptoscapes" />
+    <meta property="og:title" content="Cryptoscapes | Cryptocurrency Prices, Charts and Market Overview"/>
+    <meta property="og:description" content="Cryptocurrency information dashboard for prices, charts and market overviews. Get access to trends, coin correlations, status updates, exchange data, market snapshots and much more!" />
+    <meta property="og:image" content="https://cryptoscapes-assets.s3.ap-southeast-1.amazonaws.com/assets/images/card.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="fb:app_id" content="5728268620578399" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.cryptoscapes.org/" />
+    <meta property="twitter:title" content="Cryptoscapes | Cryptocurrency Prices, Charts and Market Overview" />
+    <meta property="twitter:description" content="Cryptocurrency information dashboard for prices, charts and market overviews. Get access to trends, coin correlations, status updates, exchange data, market snapshots and much more!" />
+    <meta property="twitter:image" content="https://cryptoscapes-assets.s3.ap-southeast-1.amazonaws.com/assets/images/card.png" />
+    <meta property="twitter:site" content="@theleonardtng" />
+    <meta property="twitter:creator" content="@theleonardtng" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/logo60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/logo76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/logo120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/logo152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo180.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" sizes="16x16" href="%PUBLIC_URL%/logo16.png" />
+    <link rel="icon" sizes="32x32" href="%PUBLIC_URL%/logo32.png" />
+    <link rel="icon" sizes="48x48" href="%PUBLIC_URL%/logo48.png" />
+    <link rel="icon" sizes="72x72" href="%PUBLIC_URL%/logo72.png" />
+    <link rel="icon" sizes="96x96" href="%PUBLIC_URL%/logo96.png" />
+    <link rel="icon" sizes="144x144" href="%PUBLIC_URL%/logo144.png" />
+    <link rel="icon" sizes="192x192" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" sizes="512x512" href="%PUBLIC_URL%/logo512.png">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-19YEHTLZBJ"></script>
+    <script>
+      window.addEventListener('load', function () {
+        if (window.ethereum) {
+          console.log('Ethereum')
+          window.ethereum
+            .request({ method: "eth_requestAccounts" })
+            .then((res) => accountChangeHandler(res[0]));
+        }
+      })
+      // document.getElementById('connect-button').addEventListener('click', event => {
+      //   let account;
+      //   ethereum.request({method: 'eth_requestAccounts'}).then(accounts => {
+      //     account = accounts[0];
+      //     console.log(account)
+      //   })
+      // })
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-19YEHTLZBJ');
+    </script>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
